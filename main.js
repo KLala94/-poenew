@@ -1,7 +1,11 @@
 // frontpage cards
+import cards from './src/frontpage/main-cards.js';
+import news from './src/frontpage/main-news.js';
+import members from './src/frontpage/main-members.js';
 function createAll(url) {
     const app = document.createElement("div");
-    app.innerHTML = url;
+    // import  * AS url from 'url';
+    app.innerHTML += url;
 }
 const styles = document.createElement('link');
 styles.href = './menu.css';
@@ -22,7 +26,7 @@ stylesNews.rel = 'stylesheet';
 //     projekte.rel = 'text/html';
 //     projekte.style = 'width: 100%; height: 100vh;';
 //     projekte.className ='projekte';
-
+const eachPage = document.createElement('div');
 // end projekte -------------------------------------------------------
 const app = document.getElementById('app');
 function displayHash() {
@@ -30,13 +34,15 @@ function displayHash() {
     if (theHash.length == 0) { theHash = "_index"; }
     switch (theHash) {
         case "_index":
-            const cards = createAll('./src/frontpage/main-cards.js');
-            const news = createAll('./src/frontpage/main-news.js');
-            const memberCards = createAll('./src/frontpage/main-members.js');
+            eachPage.innerHTML = "";
+            eachPage.innerHTML += cards;
+            eachPage.innerHTML += news;
+            eachPage.innerHTML += members;
+            // app.innerHTML = cardsPage + newsPage + memberCardsPage
             // app.appendChild(cards);
             // app.appendChild(news);
             // app.appendChild(memberCards);
-            app.replaceChildren(cards, news, memberCards);
+            app.replaceChildren(eachPage);
             
             break;
         case "#news":

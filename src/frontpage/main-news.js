@@ -7,7 +7,7 @@ function news() {
                 <p style="font-size: 30px;">
                 Mbremje filmi
                 </p>
-                <img src="../images/lion.jpg" alt="figure of PoE" width="344" height="394" class="news-img">
+                <img src="./images/lion.jpg" alt="figure of PoE" width="344" height="394" class="news-img">
                 </div>
 
             </section>
