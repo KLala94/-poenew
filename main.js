@@ -2,6 +2,15 @@
 import cards from './src/frontpage/main-cards.js';
 import news from './src/frontpage/main-news.js';
 import members from './src/frontpage/main-members.js';
+import {mainAsk, simpleText} from './src/news/news.js'
+import { photos } from './src/gallery/photos/photos.js';
+import videos from './src/gallery/videos/videos.js';
+import project from './src/project/project.js';
+import contact from './src/contact/contact.js';
+import history from './src/aboutUs/history/history.js';
+import operate from './src/aboutUs/operate/operate.js';
+import partners from './src/aboutUs/partners/partners.js';
+import staff from './src/aboutUs/staff/staff.js';
 function createAll(url) {
     const app = document.createElement("div");
     // import  * AS url from 'url';
@@ -11,21 +20,10 @@ const styles = document.createElement('link');
 styles.href = './menu.css';
 styles.rel = 'stylesheet';
 // news page ----------------------------------------------------------
-import {mainAsk, simpleText} from './src/news/news.js'
 const stylesNews = document.createElement('link');
 stylesNews.href = './src/news/news.css';
 stylesNews.rel = 'stylesheet';
-// const appNews = document.createElement("div");
-// appNews.innerHTML += mainAsk();
-// appNews.innerHTML += simpleText();
-// appNews.appendChild(stylesNews);
-// end news page ------------------------------------------------------
-// projekte page ------------------------------------------------------
-// const projekte = document.createElement('object');
-//     projekte.data = './src/projekte/projekte.html';
-//     projekte.rel = 'text/html';
-//     projekte.style = 'width: 100%; height: 100vh;';
-//     projekte.className ='projekte';
+
 const eachPage = document.createElement('div');
 // end projekte -------------------------------------------------------
 const app = document.getElementById('app');
@@ -38,26 +36,59 @@ function displayHash() {
             eachPage.innerHTML += cards;
             eachPage.innerHTML += news;
             eachPage.innerHTML += members;
-            // app.innerHTML = cardsPage + newsPage + memberCardsPage
-            // app.appendChild(cards);
-            // app.appendChild(news);
-            // app.appendChild(memberCards);
             app.replaceChildren(eachPage);
             
             break;
         case "#news":
             // console.log(newsSite);
-            app.replaceChildren(appNews);
+            eachPage.innerHTML = "";
+            eachPage.innerHTML += mainAsk();
+            eachPage.innerHTML += simpleText();
+            app.replaceChildren(eachPage);
             break;
         case "#projekte":
             app.replaceChildren(projekte);
             break;
         case "#img":
-            app.replaceChildren();
+            // eachPage.innerHTML = "";
+            eachPage.innerHTML = photos();
+            app.replaceChildren(eachPage);
             break;
         case "#videos":
-            app.replaceChildren();
+            // eachPage.innerHTML = "";
+            eachPage.innerHTML = videos;
+            app.replaceChildren(eachPage);
             break;
+        case "#projects":
+            // eachPage.innerHTML = "";
+            eachPage.innerHTML = project;
+            app.replaceChildren(eachPage);
+        break;
+        case "#projects":
+            // eachPage.innerHTML = "";
+            eachPage.innerHTML = contact;
+            app.replaceChildren(eachPage);
+        break;
+        case "#history":
+            // eachPage.innerHTML = "";
+            eachPage.innerHTML = history;
+            app.replaceChildren(eachPage);
+        break;
+        case "#history":
+            // eachPage.innerHTML = "";
+            eachPage.innerHTML = operate;
+            app.replaceChildren(eachPage);
+        break;
+        case "#history":
+            // eachPage.innerHTML = "";
+            eachPage.innerHTML = partners;
+            app.replaceChildren(eachPage);
+        break;
+        case "#history":
+            // eachPage.innerHTML = "";
+            eachPage.innerHTML = staff;
+            app.replaceChildren(eachPage);
+        break;
         default:
             // app.replaceChildren(cards, news, memberCards);
             break;

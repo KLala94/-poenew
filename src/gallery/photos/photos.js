@@ -1,4 +1,4 @@
-import data from '../../data/photosData.js'
+import data from '../../../data/photosData.js'
 function onlyImg(dataImg) {
     return `
         <img src="${dataImg}" alt="PoE" >
