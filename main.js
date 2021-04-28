@@ -1,69 +1,122 @@
-// frontpage cards
-const cards = document.createElement('object');
-    cards.data = './src/frontpage/cards.html';
-    cards.rel = 'text/html';
-    cards.style = 'width: 100%;';
-    cards.className ='cards';
-const memberCards = document.createElement('object');
-    memberCards.data = ('./src/frontpage/memberCards.html');
-    memberCards.rel = 'text/html';
-    memberCards.style = 'width: 100%;';
-    memberCards.className ='memberCards';
-const news = document.createElement('object');
-    news.data = ('./src/frontpage/news.html');
-    news.rel = 'text/html';
-    news.style = 'width: 100%;';
-    news.className ='news';
+import cards from './src/frontpage/main-cards.js';
+import news from './src/frontpage/main-news.js';
 
-const styles = document.createElement('link');
-styles.href = './menu.css';
-styles.rel = 'stylesheet';
-// news page ----------------------------------------------------------
+import members from './src/frontpage/main-members.js';
 import {mainAsk, simpleText} from './src/news/news.js'
-const stylesNews = document.createElement('link');
-stylesNews.href = './src/news/news.css';
-stylesNews.rel = 'stylesheet';
-const appNews = document.createElement("div");
-appNews.innerHTML += mainAsk();
-appNews.innerHTML += simpleText();
-appNews.appendChild(stylesNews);
-// end news page ------------------------------------------------------
+import { photos } from './src/gallery/photos/photos.js';
+import videos from './src/gallery/videos/videos.js';
+import project from './src/project/project.js';
+import contact from './src/contact/contact.js';
+import history from './src/aboutUs/history/history.js';
+import operate from './src/aboutUs/operate/operate.js';
+import partners from './src/aboutUs/partners/partners.js';
+import staff from './src/aboutUs/staff/staff.js';
+function createPage(url, urlStyle) {
+    const eachPage = document.createElement('div');
+    const styles = createStyles(urlStyle)
+    eachPage.appendChild(styles);
+    url.forEach(element => {
+        eachPage.innerHTML += element
+    });
+    return eachPage;
+}
+function createStyles(url) {
+    const styles = document.createElement('link');
+    styles.href = url;
+    styles.rel = 'stylesheet';
+    return styles;
+}
+
+const animation = document.querySelector('.animation');
+const webgl = document.getElementById('webgl');
 const app = document.getElementById('app');
+let page;
 function displayHash() {
     var theHash = window.location.hash;
-    if (theHash.length == 0) { theHash = "_index"; }
+    if (theHash.length == 0) { theHash = "#index"; }
     switch (theHash) {
-        case "_index":
-            // app.appendChild(cards);
-            // app.appendChild(news);
-            // app.appendChild(memberCards);
-            app.replaceChildren(cards, news, memberCards);
+        case "#index":
+            page = createPage([cards, news, members], './menu.css');
+            if(!animation.contains(webgl)) {
+                animation.appendChild(webgl);
+            }
+            app.replaceChildren(page);
             
             break;
         case "#news":
-            // console.log(newsSite);
-            app.replaceChildren(appNews);
+            page = createPage([mainAsk(), simpleText()], './src/news/news.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
+            app.replaceChildren( page);
             break;
         case "#img":
-            app.replaceChildren();
+            page = createPage([photos()], './src/gallery/photos/photos.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
+            app.replaceChildren(page);
             break;
         case "#videos":
-            app.replaceChildren();
+            page = createPage([videos], './src/gallery/videos/videos.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
+            app.replaceChildren(page);
             break;
+        case "#projects":
+            page = createPage([project], './src/project/project.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
+            app.replaceChildren(page);
+        break;
+        case "#contact":
+            page = createPage([contact], './src/contact/contact.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
+            app.replaceChildren(page);
+        break;
+        case "#history":
+            page = createPage([history], './src/aboutUs/aboutUs.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
+            app.replaceChildren(page);
+        break;
+        case "#operate":
+            page = createPage([operate], './src/aboutUs/aboutUs.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
+            app.replaceChildren(page);
+        break;
+        case "#partners":
+            page = createPage([partners], './src/aboutUs/aboutUs.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
+            app.replaceChildren(page);
+        break;
+        case "#staff":
+            page = createPage([staff], './src/aboutUs/aboutUs.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
+            app.replaceChildren(page);
+        break;
         default:
-            // app.replaceChildren(cards, news, memberCards);
-            break;
+            window.location.hash = '';
+        break;
     }
-    console.log("H",theHash);
 	  return true;
 	}
 
 	window.addEventListener("hashchange", function() {
-	  console.log("hashchange event");
 	  displayHash();
 	});
 
 	window.addEventListener("DOMContentLoaded", function(ev) {
-	  console.log("DOMContentLoaded event");
 	  displayHash();
 	});
