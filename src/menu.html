@@ -5,7 +5,7 @@
     </section>
     <section class="menu">
         <div class="menu-item">
-            <a href="./index.html" target="_self">
+            <a href="/" target="_self">
             <i class="material-icons">home</i>
             Home
             </a>
@@ -13,12 +13,13 @@
         <div class="gallery menu-item">Gallery 
             <i class="material-icons">keyboard_arrow_down</i>
             <div>
-
-                <link rel="import" href="./submenu/gallery.html">
+                <!-- <object type="text/html" data="./submenu/gallery.html" class="menuobj" style="width:100%; object-fit: contain; height:100% !important; flex-shrink: 0 ;"></object> -->
+                <iframe src="./submenu/gallery.html" style="width:90vw;"></iframe>
+                <!-- <link rel="import" href="./submenu/gallery.html"> -->
             </div>
         </div>
         <div class="menu-item">
-            <a href="./news/news.html" target="_self">
+            <a href="/#news" target="_self">
             News</a>
         </div>
         <div class="menu-item">
@@ -28,11 +29,12 @@
         <div class="aboutUs menu-item">About US
         <i class="material-icons">keyboard_arrow_down</i>
         <div>
-            <link rel="import" href="./submenu/aboutUs.html">
+            <iframe src="./submenu/aboutUs.html" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="width:90vw;"></iframe>
+            <!-- <link rel="import" href="./submenu/aboutUs.html"> -->
         </div>
     </div>
         <div class="menu-item">
-        <a href="./contact/contact.html" target="_self">
+        <a href="/#contact" target="_self">
 
         Contact
         </a></div>

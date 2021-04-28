@@ -1,0 +1,18 @@
+body{
+    background-color: #0F8D92;
+    /* filter: grayscale(300%); */
+}
+.main-width{
+    font-size: 1.5em;
+    width: 80%;
+}
+.photos{
+    background-color: white;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 21px;
+}
+.containPhotos{
+    margin-top: 100px;
+}
