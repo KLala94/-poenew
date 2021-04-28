@@ -11,11 +11,6 @@ import history from './src/aboutUs/history/history.js';
 import operate from './src/aboutUs/operate/operate.js';
 import partners from './src/aboutUs/partners/partners.js';
 import staff from './src/aboutUs/staff/staff.js';
-function createAll(url) {
-    const app = document.createElement("div");
-    // import  * AS url from 'url';
-    app.innerHTML += url;
-}
 const styles = document.createElement('link');
 styles.href = './menu.css';
 styles.rel = 'stylesheet';
@@ -46,9 +41,6 @@ function displayHash() {
             eachPage.innerHTML += simpleText();
             app.replaceChildren(eachPage);
             break;
-        case "#projekte":
-            app.replaceChildren(projekte);
-            break;
         case "#img":
             // eachPage.innerHTML = "";
             eachPage.innerHTML = photos();
@@ -64,7 +56,7 @@ function displayHash() {
             eachPage.innerHTML = project;
             app.replaceChildren(eachPage);
         break;
-        case "#projects":
+        case "#contact":
             // eachPage.innerHTML = "";
             eachPage.innerHTML = contact;
             app.replaceChildren(eachPage);
@@ -74,17 +66,17 @@ function displayHash() {
             eachPage.innerHTML = history;
             app.replaceChildren(eachPage);
         break;
-        case "#history":
+        case "#operate":
             // eachPage.innerHTML = "";
             eachPage.innerHTML = operate;
             app.replaceChildren(eachPage);
         break;
-        case "#history":
+        case "#partners":
             // eachPage.innerHTML = "";
             eachPage.innerHTML = partners;
             app.replaceChildren(eachPage);
         break;
-        case "#history":
+        case "#staff":
             // eachPage.innerHTML = "";
             eachPage.innerHTML = staff;
             app.replaceChildren(eachPage);
