@@ -5,9 +5,18 @@
     <link rel="stylesheet" type="text/css" href="./menu.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #webgl *{
+            min-width: 100vw;
+            min-height:70vh;
+        }
+    </style>
     
 </head>
 <body>
+    <section class="animation">
+        <div id="webgl"></div>
+    </section>
     <header>
         <section class="title">POWER-OF-EDUCATION
         </section>
@@ -57,7 +66,7 @@
     
     </footer>
     <script type="module" src="./src/submenu/submenu.js"></script>
-
+    <script type="module" src="./logo-animation.js"></script>
     <script type="module" src="./src/components/cards.js"></script>
     <script type="module" src="./src/components/team-cards.js"></script>
     <script type="module" defer src="./src/components/wide-cards.js"></script>

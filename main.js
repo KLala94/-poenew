@@ -1,4 +1,3 @@
-// frontpage cards
 import cards from './src/frontpage/main-cards.js';
 import news from './src/frontpage/main-news.js';
 
@@ -27,73 +26,97 @@ function createStyles(url) {
     styles.rel = 'stylesheet';
     return styles;
 }
-// news page ----------------------------------------------------------
-// const stylesNews = document.createElement('link');
-// stylesNews.href = './src/news/news.css';
-// stylesNews.rel = 'stylesheet';
 
-const eachPage = document.createElement('div');
-// end projekte -------------------------------------------------------
+const animation = document.querySelector('.animation');
+const webgl = document.getElementById('webgl');
 const app = document.getElementById('app');
 let page;
 function displayHash() {
     var theHash = window.location.hash;
-    if (theHash.length == 0) { theHash = "_index"; }
+    if (theHash.length == 0) { theHash = "#index"; }
     switch (theHash) {
-        case "_index":
+        case "#index":
             page = createPage([cards, news, members], './menu.css');
+            if(!animation.contains(webgl)) {
+                animation.appendChild(webgl);
+            }
             app.replaceChildren(page);
             
             break;
         case "#news":
             page = createPage([mainAsk(), simpleText()], './src/news/news.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
             app.replaceChildren( page);
             break;
         case "#img":
             page = createPage([photos()], './src/gallery/photos/photos.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
             app.replaceChildren(page);
             break;
         case "#videos":
             page = createPage([videos], './src/gallery/videos/videos.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
             app.replaceChildren(page);
             break;
         case "#projects":
             page = createPage([project], './src/project/project.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
             app.replaceChildren(page);
         break;
         case "#contact":
             page = createPage([contact], './src/contact/contact.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
             app.replaceChildren(page);
         break;
         case "#history":
             page = createPage([history], './src/aboutUs/aboutUs.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
             app.replaceChildren(page);
         break;
         case "#operate":
             page = createPage([operate], './src/aboutUs/aboutUs.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
             app.replaceChildren(page);
         break;
         case "#partners":
             page = createPage([partners], './src/aboutUs/aboutUs.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
             app.replaceChildren(page);
         break;
         case "#staff":
             page = createPage([staff], './src/aboutUs/aboutUs.css');
+            if(animation.contains(webgl)) {
+                animation.removeChild(webgl);
+            }
             app.replaceChildren(page);
         break;
         default:
-            // app.replaceChildren(cards, news, memberCards);
-            break;
+            window.location.hash = '';
+        break;
     }
 	  return true;
 	}
 
 	window.addEventListener("hashchange", function() {
-	  console.log("hashchange event");
 	  displayHash();
 	});
 
 	window.addEventListener("DOMContentLoaded", function(ev) {
-	  console.log("DOMContentLoaded event");
 	  displayHash();
 	});
