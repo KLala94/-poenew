@@ -59,5 +59,9 @@ function galleryPics() {
         </section>
     `
 }
-export const aboutUs = ourStory();
-export const gallery = galleryPics();
+// export const aboutUs = ourStory();
+// export const gallery = galleryPics();
+const gallery = document.getElementById("gallery");
+gallery.innerHTML = galleryPics();
+const aboutUs = document.getElementById("aboutUs");
+aboutUs.innerHTML = ourStory();

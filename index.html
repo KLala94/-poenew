@@ -2,29 +2,65 @@
 <html>
 <head>
 	<title>POE</title>
-	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="./menu.css">
-    <!-- <script type="module" src="./components/cards.js"></script>
-    <script type="module" src="./components/team-cards.js"></script> -->
-    <!-- <base href="./" target="_blank"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="./css/animation.css"> -->
-    <!-- <link rel="import" href="./js/deck/cards.html" id="tmplFile"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
-    <!-- <div style="display: flex"> -->
-        <script type="module" src="./src/menu.js"></script>
-        <section id="menu"></section>
+    <header>
+        <section class="title">POWER-OF-EDUCATION
+        </section>
+        <section class="menu">
+            <div class="menu-item">
+                <a href="/#" target="_self">
+                <i class="material-icons">home</i>
+                Home
+                </a>
+            </div>
+            <div class="gallery menu-item">Gallery 
+                <i class="material-icons">keyboard_arrow_down</i>
+                <div id="gallery"></div>
+            </div>
+            <div class="menu-item">
+                <a href="/#news" target="_self">
+                News</a>
+            </div>
+            <div class="menu-item">
+            <a href="/#projects" target="_self">
+            Projects and Activities</a>
+            </div>
+            <div class="aboutUs menu-item">About US
+            <i class="material-icons">keyboard_arrow_down</i>
+            <div id="aboutUs"></div></div>
+            <div class="menu-item">
+            <a href="/#contact" target="_self">
 
-        <!-- <object type="text/html" data="./src/menu.html" class="menuobj" style="width:100%; object-fit: contain; height:100% !important; flex-shrink: 0 ;"></object> -->
-    <!-- </div> -->
-     <section id="app" crossorigin="anonymous"></section>
-     <!-- <div style="display: flex"> -->
+            Contact
+            </a></div>
+        </section>
+    </header>
+    <section id="app" crossorigin="anonymous"></section>
+    <footer style="color:white">
+        <div class="footer-main">
+        <span class="footer-text">Connect with us</span>
+        <br/>
+        <div class="flex-icons">
+        <a href="https://www.facebook.com/groups/331968986995538" target="_blank">
+        <i class="material-icons icons" style="font-size:48px;color:white">facebook</i>
+        </a>
+        <a href="https://www.instagram.com/poe_lezhe/?hl=it" target="_blank">
+        <i class="fa fa-instagram icons" style="font-size:48px;color:white"></i>
+        </a>
+        </div>
+        </div>
+    
+    </footer>
+    <script type="module" src="./src/submenu/submenu.js"></script>
 
-         <object type="text/html" data="./src/footer.html" class="footer" height="185" style="width:100%; object-fit: contain; height:100% !important; flex-shrink: 0 ;"></object>
-        <!-- </div> -->
-        <script type="module" src="./src/components/cards.js"></script>
-        <script type="module" src="./src/components/team-cards.js"></script>
-        <script type="module" defer src="./src/components/wide-cards.js"></script>
+    <script type="module" src="./src/components/cards.js"></script>
+    <script type="module" src="./src/components/team-cards.js"></script>
+    <script type="module" defer src="./src/components/wide-cards.js"></script>
 
     <script type="module" src="./main.js"></script>
 
