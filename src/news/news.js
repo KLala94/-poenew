@@ -4,7 +4,7 @@ export function mainAsk()  {
     return `
         <section>
         <center>
-        <wide-cards imageInput="../skanderbeg.jpeg" backColor="#a9c0cb"
+        <wide-cards imageInput="./src/news/skanderbeg.jpeg" backColor="#a9c0cb"
         class="main-cards"
         style="margin:21px;">
         <h2 class="text h2" slot="title">Thirrje</h2>

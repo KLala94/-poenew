@@ -1,6 +1,7 @@
 // frontpage cards
 import cards from './src/frontpage/main-cards.js';
 import news from './src/frontpage/main-news.js';
+
 import members from './src/frontpage/main-members.js';
 import {mainAsk, simpleText} from './src/news/news.js'
 import { photos } from './src/gallery/photos/photos.js';
@@ -11,81 +12,79 @@ import history from './src/aboutUs/history/history.js';
 import operate from './src/aboutUs/operate/operate.js';
 import partners from './src/aboutUs/partners/partners.js';
 import staff from './src/aboutUs/staff/staff.js';
-const styles = document.createElement('link');
-styles.href = './menu.css';
-styles.rel = 'stylesheet';
+function createPage(url, urlStyle) {
+    const eachPage = document.createElement('div');
+    const styles = createStyles(urlStyle)
+    eachPage.appendChild(styles);
+    url.forEach(element => {
+        eachPage.innerHTML += element
+    });
+    return eachPage;
+}
+function createStyles(url) {
+    const styles = document.createElement('link');
+    styles.href = url;
+    styles.rel = 'stylesheet';
+    return styles;
+}
 // news page ----------------------------------------------------------
-const stylesNews = document.createElement('link');
-stylesNews.href = './src/news/news.css';
-stylesNews.rel = 'stylesheet';
+// const stylesNews = document.createElement('link');
+// stylesNews.href = './src/news/news.css';
+// stylesNews.rel = 'stylesheet';
 
 const eachPage = document.createElement('div');
 // end projekte -------------------------------------------------------
 const app = document.getElementById('app');
+let page;
 function displayHash() {
     var theHash = window.location.hash;
     if (theHash.length == 0) { theHash = "_index"; }
     switch (theHash) {
         case "_index":
-            eachPage.innerHTML = "";
-            eachPage.innerHTML += cards;
-            eachPage.innerHTML += news;
-            eachPage.innerHTML += members;
-            app.replaceChildren(eachPage);
+            page = createPage([cards, news, members], './menu.css');
+            app.replaceChildren(page);
             
             break;
         case "#news":
-            // console.log(newsSite);
-            eachPage.innerHTML = "";
-            eachPage.innerHTML += mainAsk();
-            eachPage.innerHTML += simpleText();
-            app.replaceChildren(eachPage);
+            page = createPage([mainAsk(), simpleText()], './src/news/news.css');
+            app.replaceChildren( page);
             break;
         case "#img":
-            // eachPage.innerHTML = "";
-            eachPage.innerHTML = photos();
-            app.replaceChildren(eachPage);
+            page = createPage([photos()], './src/gallery/photos/photos.css');
+            app.replaceChildren(page);
             break;
         case "#videos":
-            // eachPage.innerHTML = "";
-            eachPage.innerHTML = videos;
-            app.replaceChildren(eachPage);
+            page = createPage([videos], './src/gallery/videos/videos.css');
+            app.replaceChildren(page);
             break;
         case "#projects":
-            // eachPage.innerHTML = "";
-            eachPage.innerHTML = project;
-            app.replaceChildren(eachPage);
+            page = createPage([project], './src/project/project.css');
+            app.replaceChildren(page);
         break;
         case "#contact":
-            // eachPage.innerHTML = "";
-            eachPage.innerHTML = contact;
-            app.replaceChildren(eachPage);
+            page = createPage([contact], './src/contact/contact.css');
+            app.replaceChildren(page);
         break;
         case "#history":
-            // eachPage.innerHTML = "";
-            eachPage.innerHTML = history;
-            app.replaceChildren(eachPage);
+            page = createPage([history], './src/aboutUs/aboutUs.css');
+            app.replaceChildren(page);
         break;
         case "#operate":
-            // eachPage.innerHTML = "";
-            eachPage.innerHTML = operate;
-            app.replaceChildren(eachPage);
+            page = createPage([operate], './src/aboutUs/aboutUs.css');
+            app.replaceChildren(page);
         break;
         case "#partners":
-            // eachPage.innerHTML = "";
-            eachPage.innerHTML = partners;
-            app.replaceChildren(eachPage);
+            page = createPage([partners], './src/aboutUs/aboutUs.css');
+            app.replaceChildren(page);
         break;
         case "#staff":
-            // eachPage.innerHTML = "";
-            eachPage.innerHTML = staff;
-            app.replaceChildren(eachPage);
+            page = createPage([staff], './src/aboutUs/aboutUs.css');
+            app.replaceChildren(page);
         break;
         default:
             // app.replaceChildren(cards, news, memberCards);
             break;
     }
-    console.log("H",theHash);
 	  return true;
 	}
 
