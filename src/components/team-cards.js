@@ -1,39 +1,38 @@
 class Cards extends HTMLElement {
-    constructor() {
-        super();
-        
-    }
-    connectedCallback() {
-        var shadowRoot = this.attachShadow({mode: "open"});
-        const template = this.render() 
-        const animation = this.animation();
-        const card = document.createElement("template");
-        card.style.display = "block";
-        // template.style.display = "block";
-        card.innerHTML += template;
-        card.innerHTML += animation;
-        shadowRoot.appendChild(document.importNode(card.content.cloneNode(true),true)); 
-        let cardContainer = this.shadowRoot.querySelector(".card_container");
-        cardContainer.addEventListener("click", () => {
-            // console.log("message-banner closed", e);
-            this.cardClick();
-        });
-        // template.addEventListener('mouseover', function (e) {
-        //     this.cardClick();
-        // });
-        // cardContainer.addEventListener('mouseout', function () {
-        //     this.cardClick();
-        // })
-    }
-    render() {
-        return `
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    var shadowRoot = this.attachShadow({ mode: "open" });
+    const template = this.render()
+    const animation = this.animation();
+    const card = document.createElement("template");
+    card.style.display = "block";
+    // template.style.display = "block";
+    card.innerHTML += template;
+    card.innerHTML += animation;
+    shadowRoot.appendChild(document.importNode(card.content.cloneNode(true), true));
+    let cardContainer = this.shadowRoot.querySelector(".card_container");
+    cardContainer.addEventListener("click", () => {
+      // console.log("message-banner closed", e);
+      this.cardClick();
+    });
+    // template.addEventListener('mouseover', function (e) {
+    //     this.cardClick();
+    // });
+    // cardContainer.addEventListener('mouseout', function () {
+    //     this.cardClick();
+    // })
+  }
+  render() {
+    return `
         <div
         class="card_container"
         >  
             <div class="flip">
                 <div class="card_front">
                     <slot name="title" ></slot>
-                    <img   src="${this.getAttribute('imageInput')}" alt="member of PoE" width="250" height="194">
+                    <img loading="lazy"  src="${this.getAttribute('imageInput')}" alt="member of PoE" width="250" height="194">
                     <slot name="subtitle"></slot>
                     <slot name="text"></slot>
                     <slot name="button"></slot>
@@ -43,9 +42,9 @@ class Cards extends HTMLElement {
                 </div>
             </div>
         </div>`
-    }
-    animation() {
-        return `
+  }
+  animation() {
+      return `
         <style>
             img{ 
                 border-radius: 50%; 
@@ -96,20 +95,16 @@ class Cards extends HTMLElement {
                 transform: translate(0px);
             } 
         </style>`;
-
     }
     // flip card
-    cardClick(evt) {
-        let cardContainer = this.shadowRoot.querySelector(".card_container");
-
-        cardContainer.classList.toggle("flip_card");
-        cardContainer.classList.toggle("slide_over");
-
-        
-    }
-    static get observedAttributes() {
-        return ["imageInput", "backColor"];
-    }
+  cardClick(evt) {
+    let cardContainer = this.shadowRoot.querySelector(".card_container");
+    cardContainer.classList.toggle("flip_card");
+    cardContainer.classList.toggle("slide_over");
+  }
+  static get observedAttributes() {
+    return ["imageInput", "backColor"];
+  }
 }
 window.customElements.define("member-cards", Cards);
 export default Cards
