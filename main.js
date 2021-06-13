@@ -28,7 +28,6 @@ function createStyles(url) {
   return styles;
 }
 const animation = document.querySelector('.animation');
-const webgl = document.getElementById('webgl');
 const app = document.getElementById('app');
 let page;
 
@@ -38,72 +37,42 @@ function displayHash() {
   switch (theHash) {
     case "#index":
       page = createPage([cards, news, members], './menu.css');
-      if (!animation.contains(webgl)) {
-        animation.appendChild(webgl);
-      }
       app.replaceChildren(page);
       break;
     case "#news":
       page = createPage([mainAsk(), simpleText()], './src/news/news.css');
-      if (animation.contains(webgl)) {
-        animation.removeChild(webgl);
-      }
       app.replaceChildren(page);
       break;
     case "#img":
       page = createPage([photos()], './src/gallery/photos/photos.css');
-      if (animation.contains(webgl)) {
-        animation.removeChild(webgl);
-      }
       app.replaceChildren(page);
       break;
     case "#videos":
       page = createPage([videos], './src/gallery/videos/videos.css');
-      if (animation.contains(webgl)) {
-        animation.removeChild(webgl);
-      }
       app.replaceChildren(page);
       break;
     case "#projects":
       page = createPage([project], './src/project/project.css');
-      if (animation.contains(webgl)) {
-        animation.removeChild(webgl);
-      }
       app.replaceChildren(page);
       break;
     case "#contact":
       page = createPage([contact], './src/contact/contact.css');
-      if (animation.contains(webgl)) {
-        animation.removeChild(webgl);
-      }
       app.replaceChildren(page);
       break;
     case "#history":
       page = createPage([history], './src/aboutUs/aboutUs.css');
-      if (animation.contains(webgl)) {
-        animation.removeChild(webgl);
-      }
       app.replaceChildren(page);
       break;
     case "#operate":
       page = createPage([operate], './src/aboutUs/aboutUs.css');
-      if (animation.contains(webgl)) {
-        animation.removeChild(webgl);
-      }
       app.replaceChildren(page);
       break;
     case "#partners":
       page = createPage([partners], './src/aboutUs/aboutUs.css');
-      if (animation.contains(webgl)) {
-        animation.removeChild(webgl);
-      }
       app.replaceChildren(page);
       break;
     case "#staff":
       page = createPage([staff], './src/aboutUs/aboutUs.css');
-      if (animation.contains(webgl)) {
-        animation.removeChild(webgl);
-      }
       app.replaceChildren(page);
       break;
     default:

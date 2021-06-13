@@ -1,24 +1,27 @@
-.main-width{
-    width: 50%;
-    font-size: 1.5em;
-    color: black;
+.main-width {
+  width: 50%;
+  font-size: 1.5em;
+  color: black;
 }
-.h2 {
-    color: black;
-}
-.textNews{
-    font-size: 20px;
-    line-height: 1cm;
-    max-height: 90px;
-    overflow: hidden;
-}
-.textToggle{
-    height: max-content;
-    display: table;
-}
-.news{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
 
+.h2 {
+  color: black;
+}
+
+.textNews {
+  font-size: 20px;
+  line-height: 1cm;
+  max-height: 90px;
+  overflow: hidden;
+}
+
+.textToggle {
+  height: max-content;
+  display: table;
+}
+
+.news {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
