@@ -22,11 +22,6 @@ body {
   font-size: larger;
 }
 
-.menuobj {
-  max-width: 100%;
-  min-height: 56px;
-}
-
 .menu {
   display: flex;
   color: white;
@@ -257,10 +252,6 @@ footer {
     min-height: 350px;
     flex-wrap: wrap;
   }
-  .menuobj {
-    width: 100%;
-    min-height: 500px;
-  }
   .menu {
     flex-direction: column;
     width: 100%;
@@ -278,10 +269,6 @@ footer {
   header {
     min-height: 350px;
     flex-wrap: wrap;
-  }
-  .menuobj {
-    width: 100%;
-    min-height: 500px;
   }
   .menu {
     flex-direction: column;
