@@ -2,7 +2,7 @@ body {
   box-sizing: border-box;
 }
 .full-width-banner {
-  min-width: 100vw;
+  width: 100vw;
   max-height: 70vh;
   object-fit: cover;
 }
@@ -11,7 +11,7 @@ body {
   top: 30px;
   left: 30px;
   opacity: 0.8;
-  max-height: 60vh;
+  max-height: 50vh;
 }
 .title {
   /* display: flex; */
@@ -135,6 +135,11 @@ a {
 main-cards {
   box-shadow: 10px 5px 5px grey;
 }
+.members * {
+  margin: 15px;
+  max-width: 90%;
+  text-align: center;
+}
 .btn {
   border: solid #00B5EE 2px;
   display: table;
@@ -250,6 +255,9 @@ footer {
   }
 }
 @media only screen and (max-width: 750px) {
+  .logo-banner {
+    max-height: 25vh;
+  }
   header {
     min-height: 350px;
     flex-wrap: wrap;
@@ -283,5 +291,8 @@ footer {
   }
   .operate-span {
     left: 50% !important;
+  }
+  .main-news * {
+    flex-direction: column;
   }
 }
