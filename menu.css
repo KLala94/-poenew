@@ -37,6 +37,11 @@ body {
   /* margin-top: 0px; */
   /* justify-content: space-between; */
 }
+.navbar-collapse {
+  justify-content: flex-end;
+  flex-grow: 0 !important;
+  margin-right: 150px;
+}
 .dropdown-menu {
   /* display: flex;
   flex-direction: row; */
@@ -132,8 +137,10 @@ main-cards {
 }
 .btn {
   border: solid #00B5EE 2px;
+  display: table;
   width: 130px;
-  height: 36px;
+  /* height: 36px; */
+  padding: 10px;
   background-color: white;
   color: #FC7DFF;
   position: absolute;
