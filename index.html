@@ -6,6 +6,8 @@
   <link rel="stylesheet" type="text/css" href="./menu.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -13,43 +15,81 @@
     <img src="./images/logo/PoELogo.jpeg" alt="logoja" class="logo-banner">
     <img src="./images/main/foto-profili-poe.jpg" alt="takimi" class="full-width-banner">
   </section>
-  <header>
-    <section class="title">POWER-OF-EDUCATION
-    </section>
-    <section class="menu">
-      <div class="menu-item">
-        <a href="/#" target="_self">
-          <i class="material-icons">home</i> Home
-        </a>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="title" href="#">POWER-OF-EDUCATION</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/#">Home</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Gallery
+            </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/#img">
+                    <img loading="lazy" height="100" width="100" src="./../images/menuImg/photocamera2.png" alt=""> Photos
+                  </a>
+                </div>
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/#videos">
+                    <img loading="lazy" height="100" width="100" src="./../images/menuImg/camera2.png" alt=""> Videos
+                  </a>
+                </div>
+              </ul>
+            </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#news">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#projects">Projects and Activities</a>
+          </li>
+          <li class="nav-item">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us
+            </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/#history">
+                    <img loading="lazy" height="100" width="100" src="../../images/menuImg/PoELogo.jpeg" alt=""> Our History
+                  </a>
+                </div>
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/#operate">
+                    <img loading="lazy" height="100" width="100" src="../../images/menuImg/skanderbeg.jpeg" alt=""> Where do we operate
+                  </a>
+                </div>
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/#staff">
+                    <img loading="lazy" height="100" width="100" src="../../images/menuImg/avatarGirl1.jpeg" alt=""> Out Stuff
+                  </a>
+                </div>
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/#partners">
+                    <img loading="lazy" height="100" width="100" src="../../images/menuImg/photocamera2.png" alt=""> Our Partners
+                  </a>
+                </div>
+              </ul>
+            </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#contact">Contact</a>
+          </li>
+        </ul>
       </div>
-      <div class="gallery menu-item">Gallery
-        <i class="material-icons">keyboard_arrow_down</i>
-        <div id="gallery"></div>
-      </div>
-      <div class="menu-item">
-        <a href="/#news" target="_self">
-                News</a>
-      </div>
-      <div class="menu-item">
-        <a href="/#projects" target="_self">
-            Projects and Activities</a>
-      </div>
-      <div class="aboutUs menu-item">About US
-        <i class="material-icons">keyboard_arrow_down</i>
-        <div id="aboutUs"></div>
-      </div>
-      <div class="menu-item">
-        <a href="/#contact" target="_self">
-
-            Contact
-            </a></div>
-    </section>
-  </header>
+    </div>
+  </nav>
   <section id="app" crossorigin="anonymous"></section>
   <footer style="color:white">
     <div class="footer-main">
       <span class="footer-text">Connect with us</span>
-      <br/>
+      <br />
       <div class="flex-icons">
         <a href="https://www.facebook.com/groups/331968986995538" target="_blank">
           <i class="material-icons icons" style="font-size:48px;color:white">facebook</i>
@@ -61,11 +101,10 @@
     </div>
 
   </footer>
-  <script type="module" src="./src/submenu/submenu.js"></script>
-  <script type="module" src="./logo-animation.js"></script>
   <script type="module" src="./src/components/cards.js"></script>
   <script type="module" src="./src/components/team-cards.js"></script>
   <script type="module" defer src="./src/components/wide-cards.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
   <script type="module" src="./main.js"></script>
 
