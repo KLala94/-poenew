@@ -64,7 +64,7 @@ class Cards extends HTMLElement {
             }
             .card_front, .card_back{
                 backface-visibility: hidden;
-                width: 344px; 
+                width: 320px; 
                 height:513px;  
                 backface-visibility: hidden;
                 -webkit-backface-visibility: hidden;
@@ -87,7 +87,7 @@ class Cards extends HTMLElement {
             }
             .card_container{
                 transition: 0.6s;
-                width: 344px; 
+                width: 320px; 
                 height:513px;  
                 background-color: ${this.getAttribute('backColor')};
             }

@@ -1,5 +1,5 @@
 function memberCards() {
-    return `
+  return `
         <section class="cards">
             <member-cards imageInput="../images/drejtimi/drejtimi-social.jpg" backColor="#1E3561"
                 class="member-cards"
@@ -9,7 +9,7 @@ function memberCards() {
                 <p  class="text-member" slot="text"></p>
                 <button class="btn"
                 style="background-color: #1E3561" slot="button">Lexo më shumë</button>
-                <div slot="description">
+                <div slot="description" class="members">
                     <h2>DREJTIMI SOCIAL</h2>
                     <p>
                        Avokatësi, lobim, advokim për të drejtat e të rinjve  
@@ -45,7 +45,7 @@ function memberCards() {
                 <p  class="text-member" slot="text"></p>
                 <button class="btn"
                     style="background-color: #185472" slot="button">Lexo më shumë</button>
-                    <div slot="description">
+                    <div slot="description" class="members">
                     <h2>DREJTIMI EKONOMIK</h2>
                     <p>
                                                                 Ndërmjetësim për punësim  
@@ -60,8 +60,7 @@ function memberCards() {
                 </div>
             </member-cards>
         </section>
-        `
-    ;
+        `;
 
 }
 
