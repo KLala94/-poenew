@@ -1,6 +1,6 @@
 // import {Cards} from './components/cards.js';
 function cards() {
-    return `
+  return `
         <section class="cards">
             <main-cards imageInput="./images/main/takimi-hapes.jpg" backColor="#1E3561"
                 class="main-cards"
@@ -10,7 +10,7 @@ function cards() {
                 <p  class="text" slot="text"></p>
                 <button class="btn"
                     style="background-color: #1E3561" slot="button">
-                    <a href="../projekte/projekt.html">
+                    <a href="/#projects">
                     See More
                     </a></button>
             </main-cards>
@@ -29,8 +29,7 @@ function cards() {
                 <p  class="text" slot="text"></p>
             </main-cards>
         </section>
-        `
-    ;
+        `;
 
 }
 
