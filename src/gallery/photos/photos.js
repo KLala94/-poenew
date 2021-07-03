@@ -2,15 +2,15 @@ import data from '../../../data/photosData.js';
 
 function onlyImg(dataImg) {
   return `
-        <img loading="lazy" src="${dataImg}" alt="PoE" loading="lazy">
+        <img class="photos-comp-img" loading="lazy" src="${dataImg}" alt="PoE" loading="lazy">
     `
 }
 
 function simpleImages(data) {
   const onlyImages = data.photos.reduceRight((acc, data, index) => acc + onlyImg(data), '');
   return `<div class="containPhotos">
-        <h2>${data.h1}</h2>
-        <p class="main-width">${data.text}</p>
+        <h2 class="photos-comp-text">${data.h1}</h2>
+        <p class="main-width photos-comp-text">${data.text}</p>
         ${onlyImages}
     </div>
     `;
