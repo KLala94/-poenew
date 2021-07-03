@@ -1,20 +1,26 @@
-body{
-    /* background-color: #0F8D92; */
-    /* filter: grayscale(300%); */
+body {
+  /* background-color: #0F8D92; */
+  /* filter: grayscale(300%); */
 }
-.operate{
-    width:50%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    /* text-align: center; */
-    margin: auto;
+.operate {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  text-align: center;
+  /* margin: auto; */
 }
-.operate h1,div{
-    width: 99%;
-    /* text-align: center; */
+@media screen and (max-width: 700px) {
+  .operate {
+    width: 90%;
+    text-align: center;
+  }
 }
-.operate div{
-    font-size: 1.3rem;
-    line-height: 230%;
+.operate h1, div {
+  width: 99%;
+  /* text-align: center; */
+}
+.operate div {
+  font-size: 1.3rem;
+  line-height: 230%;
 }
