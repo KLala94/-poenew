@@ -69,6 +69,9 @@ body {
   width: 300px;
   z-index: 5;
 }
+.frontpage-text{
+  padding: 15px;
+}
 .aboutUs div {
   display: none;
 }

@@ -16,7 +16,7 @@ class Cards extends HTMLElement {
     return `
         <div style="width: 320px; height:513px;  background-color: ${this.getAttribute('backColor')};
         ">
-            <img src="${this.getAttribute('imageInput')}" alt="figure of PoE" width="344" height="194">
+            <img src="${this.getAttribute('imageInput')}" alt="figure of PoE" width="320" height="194">
             <slot name="title"></slot>
             <slot name="subtitle"></slot>
             <slot name="text"></slot>
