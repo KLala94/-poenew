@@ -1,16 +1,21 @@
-.project{
-    width:50%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    /* text-align: center; */
-    margin: auto;
+.project {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  /* text-align: center; */
+  margin: auto;
 }
-.project h1,div{
-    width: 99%;
-    /* text-align: center; */
+@media screen and (max-width: 700px) {
+  .project {
+    width: 90%;
+  }
 }
-.project div{
-    font-size: 1.3rem;
-    line-height: 230%;
+.project h1, div {
+  width: 99%;
+  /* text-align: center; */
+}
+.project div {
+  font-size: 1.3rem;
+  line-height: 230%;
 }
