@@ -13,9 +13,9 @@ class Cards extends HTMLElement {
   }
   render() {
     return `
-        <div style="width: 85%; height:513px;  background-color: ${this.getAttribute('backColor')};
+        <div style="display: table;  background-color: ${this.getAttribute('backColor')};
         ">
-            <img loading="lazy" src="${this.getAttribute('imageInput')}" alt="figure of PoE" width="344" height="194">
+            <img loading="lazy" src="${this.getAttribute('imageInput')}" alt="figure of PoE" width="320" height="194">
             <slot name="title"></slot>
             <slot name="subtitle"></slot>
             <slot name="text"></slot>
