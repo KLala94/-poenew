@@ -12,6 +12,12 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+@media screen and (min-width: 600px) {
+  .main__news {
+    max-width: 80%;
+    margin-left: 10%;
+  }
+}
 @media screen and (max-width: 700px) {
   .news-text {
     text-align: center;

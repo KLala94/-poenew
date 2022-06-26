@@ -6,10 +6,10 @@ function cards() {
                 class="main-cards"
                 style="margin:21px;">
                 <h2 class="text frontpage-text" slot="title"></h2>
-                <h3 class="text frontpage-text" slot="subtitle">Takimi i hapes</h3>
+                <h3 class="text frontpage-text" slot="subtitle">Takimi hapes</h3>
                 <p  class="text frontpage-text" slot="text"></p>
-                <button class="btn"
-                    style="background-color: #1E3561" slot="button">
+                <button class="btn btn-outline-primary"
+                    slot="button">
                     <a href="/#projects">
                     See More
                     </a></button>

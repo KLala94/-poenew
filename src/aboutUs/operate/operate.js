@@ -1,7 +1,7 @@
 function operate() {
     return `
         <section class="operate">
-                <h1 class="operate-heading">Where Do We Operate</h1>
+                <h1 class="operate-heading mb-4">Where Do We Operate</h1>
                 <div>
                     Organizata operon në territorin e Bashkisë së Lezhës dhe synon që në vitet në vijim të ketë seli edhe në territorin e Bashkive të tjera. Shoqata është një organizatë jofitimprurëse vendase dhe pa anëtarësi. 
                     <br>

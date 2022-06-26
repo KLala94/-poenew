@@ -7,8 +7,8 @@ function memberCards() {
                 <h2 class="text-member" slot="title">Drejtimi Social</h2>
                 <h3 class="text-member" slot="subtitle"></h3>
                 <p  class="text-member" slot="text"></p>
-                <button class="btn"
-                style="background-color: #1E3561" slot="button">Lexo më shumë</button>
+                <button class="btn btn-secondary"
+                    slot="button">Lexo më shumë</button>
                 <div slot="description" class="members">
                     <h2>DREJTIMI SOCIAL</h2>
                     <p>
@@ -43,8 +43,8 @@ function memberCards() {
                 <h2 class="text-member" slot="title">Drejtimi Ekonomik</h2>
                 <h3 class="text-member" slot="subtitle"></h3>
                 <p  class="text-member" slot="text"></p>
-                <button class="btn"
-                    style="background-color: #185472" slot="button">Lexo më shumë</button>
+                <button class="btn btn-secondary"
+                    slot="button">Lexo më shumë</button>
                     <div slot="description" class="members">
                     <h2>DREJTIMI EKONOMIK</h2>
                     <p>

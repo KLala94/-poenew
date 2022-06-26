@@ -3,6 +3,7 @@
 
 <head>
   <title>POE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" type="text/css" href="./menu.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,7 +14,7 @@
 <body>
   <section class="full-width-banner">
     <img src="./images/logo/PoELogo.jpeg" alt="logoja" class="logo-banner">
-    <img src="./images/main/foto-profili-poe.jpg" alt="takimi" class="full-width-banner">
+    <!-- <img src="./images/main/foto-profili-poe.jpg" alt="takimi" class="full-width-banner"> -->
   </section>
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
@@ -86,18 +87,37 @@
     </div>
   </nav>
   <section id="app" crossorigin="anonymous"></section>
-  <footer style="color:white">
-    <div class="footer-main">
-      <span class="footer-text">Connect with us</span>
-      <br />
-      <div class="flex-icons">
-        <a href="https://www.facebook.com/groups/331968986995538" target="_blank">
-          <i class="material-icons icons" style="font-size:48px;color:white">facebook</i>
-        </a>
-        <a href="https://www.instagram.com/poe_lezhe/?hl=it" target="_blank">
-          <i class="fa fa-instagram icons" style="font-size:48px;color:white"></i>
-        </a>
+  <footer style="color:white" class="footer">
+    <div class="footer__bg">
+      <div class="footer__container container grid">
+        <div>
+          <h1 class="footer__title">Power of Education</h1>
+          <span class="footer__subtitle"></span>
+        </div>
+        <ul class="footer__links">
+          <li>
+            <a href="#news" class="footer__link">News</a>
+          </li>
+          <li>
+            <a href="#img" class="footer__link">Photos</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="footer__link">Contact us</a>
+          </li>
+
+        </ul>
+        <div class="footer__socials">
+          <a href="https://www.facebook.com/groups/331968986995538" target="_blank" class="footer__social">
+            <i class="material-icons icons" style="font-size:24px;color:white">facebook</i>
+          </a>
+          <a href="https://www.instagram.com/poe_lezhe/?hl=it" target="_blank" class="footer__social">
+            <i class="fa fa-instagram icons" style="font-size:24px;color:white"></i>
+          </a>
+        </div>
       </div>
+
+      <p class="footer__copy">&copy; All right reserved</p>
     </div>
 
   </footer>

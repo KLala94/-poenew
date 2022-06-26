@@ -1,7 +1,7 @@
 function partners() {
     return `
         <section class="operate">
-                <h1 class="operate-heading">Our Partners</h1>
+                <h1 class="operate-heading mb-4">Our Partners</h1>
                 <div>
                 Instituti për Demokraci dhe Ndërmjetësim - IDM, duke punuar për advokimin për transparencë në institucionet lokale në Lezhë 
                 -Istituti Agjenda, duke punuar për platformën http://www.buxhetimi.al/ lidhur me çështjet e demokracisë lokale.

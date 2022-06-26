@@ -1,6 +1,6 @@
 function news() {
   return `
-        <center>
+        <div class="flex__wrapper">
             <section class="main-news">
                 <h2>News</h2>
                 <div class="news-content">
@@ -11,7 +11,7 @@ function news() {
                 </div>
 
             </section>
-        </center>
+        </div>
         `
 }
 export default news();

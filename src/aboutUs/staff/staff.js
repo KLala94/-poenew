@@ -1,7 +1,7 @@
 function staff() {
     return `
         <section class="operate">
-                <h1 class="operate-heading">Our Staff</h1>
+                <h1 class="operate-heading mb-4">Our Staff</h1>
                 <div>
                 </div>
         </section>
