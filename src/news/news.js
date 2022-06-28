@@ -3,7 +3,8 @@ import dataNews from '../../data/newsData.js'
 export function mainAsk() {
   return `
         <section>
-        <center>
+        <div class="flex__wrapper">
+
         <wide-cards imageInput="./src/news/skanderbeg.jpeg" backColor="#a9c0cb"
         class="main-cards">
         <h2 class="text news-text h2" slot="title">Thirrje</h2>
@@ -16,7 +17,7 @@ export function mainAsk() {
             Keep calm and love Power of Education
         </p>
         </wide-cards>
-        </center>
+        </div>
         </section>
     `;
 
@@ -24,17 +25,22 @@ export function mainAsk() {
 
 function onlyText(data, index) {
   return `
+      <div class="main__news">
         <h1 class="news">${data.heading}</h1>
         <h3 class="news">${data.date}</h3>
         <p class="textNews news" onclick='${toggleSize()}'>
         ${data.text}
         </p>
         <p class="news">${data.fromPerson}</p>
+      </div>
     `;
 }
 const onlyImages = dataNews.reduceRight((acc, data, index) => acc + onlyText(data, index), '');
 export function simpleText() {
   return `<div>
+      <h4 class="ms-4">
+        <span class="material-icons text-secondary info-icon">info</span>&nbsp; Kliko tekstin për ta hapur ose mbyllur
+      </h4> 
         ${onlyImages}
     </div>
     `;

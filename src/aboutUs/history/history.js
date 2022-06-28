@@ -1,7 +1,7 @@
 function history() {
     return `
         <section class="operate">
-                <h1 class="operate-heading">Our History</h1>
+                <h1 class="operate-heading mb-4">Our History</h1>
                 <div>
 
 
